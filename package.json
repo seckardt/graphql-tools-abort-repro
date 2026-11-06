@@ -1,0 +1,16 @@
+{
+  "name": "graphql-tools-abort-repro",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "postinstall": "node verify.mjs",
+    "repro": "node --unhandled-rejections=strict repro.mjs",
+    "control": "node --unhandled-rejections=strict repro.mjs --control",
+    "verify": "node verify.mjs"
+  },
+  "dependencies": {
+    "@graphql-tools/executor": "4.1.7",
+    "graphql": "17.0.2"
+  }
+}
